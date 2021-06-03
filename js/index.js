@@ -57,14 +57,18 @@ let headerImage = document.getElementById("cta-img");
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 
+
 //adding in code snippets across the screen
 let snippetImage = document.getElementById("middle-img");
 snippetImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 //adding in H1 dom is awesome
-let headerText = document.getElementsByTagName("h1");
-headerText[0].textContent = siteContent["cta"]["h1"]
+// let headerText = document.getElementsByTagName("h1");
+// headerText[0].textContent = siteContent["cta"]["h1"]
+let h1Text = document.querySelector("h1");
+let h1Split = siteContent["cta"]["h1"].split(" ").join("<br>")
+h1Text.innerHTML = h1Split
 
 
 // adding get started inside border box
